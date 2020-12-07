@@ -39,6 +39,7 @@ noChargeHours.addEventListener("change", calc);
 activeHours.addEventListener("change", calc);
 activeHours.addEventListener("change", calc);
 solarPerformance.addEventListener("change", calc);
+batteryEfficiency.addEventListener("change", calc);
 chargerPerformance.addEventListener("change", calc);
 
 calc();

@@ -20,13 +20,13 @@
 
         <tr>
             <td><label for="powerConsumption">Average power consumption</label></td>
-            <td><input type="text" id="powerConsumption" value="25"></td>
+            <td><input type="number" id="powerConsumption" value="25" min="0"></td>
             <td>Watts [W]</td>
         </tr>
 
         <tr>
             <td><label for="voltage">Battery voltage</label></td>
-            <td><input type="text" id="voltage" value="12"></td>
+            <td><input type="number" id="voltage" value="12" min="0"></td>
             <td>Volts [V]</td>
         </tr>
 
@@ -41,7 +41,7 @@
         <tr>
             <td><label for="noChargeHours">Number of hours without receiving a
                     charge</label></td>
-            <td><input type="text" id="noChargeHours" value="48"></td>
+            <td><input type="number" id="noChargeHours" value="48" min="0"></td>
             <td>Hours [h]</td>
         </tr>
 
@@ -55,7 +55,7 @@
 
         <tr>
             <td><label for="batteryEfficiency">Battery efficiency factor</label></td>
-            <td><input type="text" id="batteryEfficiency" value="1.25"></td>
+            <td><input type="number" id="batteryEfficiency" value="1.25" step="0.25" min="0"></td>
             <td>1 for new battery, 1.5 for used battery</td>
         </tr>
 
@@ -69,13 +69,13 @@
 
         <tr>
             <td><label for="activeHours">Hours of usable sun per day</label></td>
-            <td><input type="text" id="activeHours" value="6"></td>
+            <td><input type="number" id="activeHours" value="6" min="0" max="24"></td>
             <td>Hours [h]</td>
         </tr>
 
         <tr>
             <td><label for="solarPerformance">Average solar performance</label></td>
-            <td><input type="text" id="solarPerformance" value="50">%</td>
+            <td><input type="number" id="solarPerformance" value="50" min="0" max="100">%</td>
             <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
         </tr>
         <tr>
@@ -102,10 +102,9 @@
 
         <tr>
             <td><label for="chargerPerformance"> Switch mode power supply performance (charger)</label></td>
-            <td><input type="text" id="chargerPerformance" value="80">%</td>
+            <td><input type="number" id="chargerPerformance" value="80" min="0" max="100">%</td>
             <td></td>
         </tr>
-
 
         <tr>
             <td><label for="panelPower">PV Panel's output power</label></td>
