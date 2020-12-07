@@ -25,7 +25,7 @@
         </tr>
 
         <tr>
-            <td><label for="voltage">Battery voltage</label></td>
+            <td><label for="voltage"><b>Battery voltage</b></label></td>
             <td><input type="number" id="voltage" value="12" min="0"></td>
             <td>Volts [V]</td>
         </tr>
@@ -39,8 +39,8 @@
         </tr>
 
         <tr>
-            <td><label for="noChargeHours">Number of hours without receiving a
-                    charge</label></td>
+            <td><label for="noChargeHours">Number of hours <b>without receiving a
+                        charge</b> (min)</label></td>
             <td><input type="number" id="noChargeHours" value="48" min="0"></td>
             <td>Hours [h]</td>
         </tr>
@@ -69,24 +69,25 @@
 
         <tr>
             <td><label for="activeHours">Hours of usable sun per day</label></td>
-            <td><input type="number" id="activeHours" value="6" min="0" max="24"></td>
+            <td><input type="number" id="activeHours" value="8" min="0" max="24"></td>
             <td>Hours [h]</td>
         </tr>
 
         <tr>
-            <td><label for="solarPerformance">Average solar performance</label></td>
+            <td><label for="solarPerformance">Solar performance (min)</label></td>
             <td><input type="number" id="solarPerformance" value="50" min="0">%</td>
             <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
         </tr>
         <tr>
-            <td><label for="chargeTime">Charge time</label></td>
+            <td><label for="chargeTime"><b>Charge time</b> (Hours of usable sun per day * Solar performance)</label>
+            </td>
             <td>
                 <div id="chargeTime"></div>
             </td>
             <td>Hours [h]</td>
         </tr>
         <tr>
-            <td><label for="chargeCurrent">Charge current</label></td>
+            <td><label for="chargeCurrent"><b>Charge current</b></label></td>
             <td>
                 <div id="chargeCurrent"></div>
             </td>
@@ -102,7 +103,7 @@
 
         <tr>
             <td><label for="chargerPerformance"> Switch mode power supply performance (charger)</label></td>
-            <td><input type="number" id="chargerPerformance" value="80" min="0" max="100">%</td>
+            <td><input type="number" id="chargerPerformance" value="90" min="0" max="100">%</td>
             <td></td>
         </tr>
 
