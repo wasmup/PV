@@ -1,0 +1,18 @@
+.border{
+    border: 1px solid black;
+  }
+  .toolface,
+  .table {
+      margin: 8px;
+  }
+  td {
+      padding: 4;
+  }
+  tr:nth-child(2n+1) {
+      background: rgb(202, 228, 215);
+  }
+  input[type=text] {
+    /* background-color: #3CBC8D; */
+    /* color: white; */
+    font-size:24px;
+  }

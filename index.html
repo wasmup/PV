@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td>Item</td>
+            <td>Value</td>
+            <td>Unit</td>
+            <td>Action</td>
+        </tr>
+
+        <tr>
+            <td><label for="powerConsumption">Average power consumption</label></td>
+            <td><input type="text" id="powerConsumption" value="25"></td>
+            <td>Watts [W]</td>
+        </tr>
+
+        <tr>
+            <td><label for="voltage">Battery voltage</label></td>
+            <td><input type="text" id="voltage" value="12"></td>
+            <td>Volts [V]</td>
+        </tr>
+
+        <tr>
+            <td>Average Current</td>
+            <td>
+                <div id="averageCurrent"></div>
+            </td>
+            <td>Amperes [A] </td>
+        </tr>
+
+        <tr>
+            <td><label for="noChargeHours">Number of hours without receiving a
+                    charge</label></td>
+            <td><input type="text" id="noChargeHours" value="48"></td>
+            <td>hours [h]</td>
+        </tr>
+
+        <tr>
+            <td><label for="minimumCapacity">Minimum battery capacity</label></td>
+            <td>
+                <div id="minimumCapacity"></div>
+            </td>
+            <td>Amperes*Hours [Ah]</td>
+        </tr>
+
+        <tr>
+            <td><label for="batteryEfficiency">Battery efficiency factor</label></td>
+            <td><input type="text" id="batteryEfficiency" value="1.25"></td>
+            <td>1 for new battery, 1.5 for used battery</td>
+        </tr>
+
+        <tr>
+            <td><label for="batteryCapacity">Battery Capacity</label></td>
+            <td>
+                <div id="batteryCapacity"> </div>
+            </td>
+            <td>Amperes*Hours [Ah]</td>
+        </tr>
+
+        <tr>
+            <td><label for="activeHours">Hours of usable sun per day</label></td>
+            <td><input type="text" id="activeHours" value="6"></td>
+            <td>Hours [h]</td>
+        </tr>
+
+        <tr>
+            <td><label for="solarPerformance"> Solar performance</label></td>
+            <td><input type="text" id="solarPerformance" value="50">%</td>
+            <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
+        </tr>
+        <tr>
+            <td><label for="chargeTime">Charge time</label></td>
+            <td>
+                <div id="chargeTime"></div>
+            </td>
+            <td>Hours [h]</td>
+        </tr>
+        <tr>
+            <td><label for="chargeCurrent">Charge current</label></td>
+            <td>
+                <div id="chargeCurrent"></div>
+            </td>
+            <td>Amperes [A]</td>
+        </tr>
+        <tr>
+            <td><label for="panelCurrent">Panel current output</label></td>
+            <td>
+                <div id="panelCurrent"></div>
+            </td>
+            <td>Amperes [A]</td>
+        </tr>
+        <tr>
+            <td><label for="panelPower">Panel power output</label></td>
+            <td>
+                <div id="panelPower"></div>
+            </td>
+            <td>Watts [W]</td>
+            <td><input type="button" value="Calculate" id="calculate"> </td>
+        </tr>
+    </table>
+    <script src="index.js"></script>
+</body>
+
+</html>
