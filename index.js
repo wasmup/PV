@@ -33,13 +33,19 @@ function calc() {
 }
 
 document.getElementById("calculate").addEventListener("click", calc);
+
 powerConsumption.addEventListener("change", calc);
+
 voltage.addEventListener("change", calc);
-batteryEfficiency.addEventListener("change", calc);
+
 noChargeHours.addEventListener("change", calc);
+
+batteryEfficiency.addEventListener("change", calc);
+
 activeHours.addEventListener("change", calc);
-activeHours.addEventListener("change", calc);
+
 solarPerformance.addEventListener("change", calc);
+
 chargerPerformance.addEventListener("change", calc);
 
 calc();
