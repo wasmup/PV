@@ -9,11 +9,13 @@ let activeHours = document.getElementById("activeHours");
 let solarPerformance = document.getElementById("solarPerformance");
 let chargeTime = document.getElementById("chargeTime");
 let chargeCurrent = document.getElementById("chargeCurrent");
-let panelCurrent = document.getElementById("panelCurrent");
+let chargerCurrent = document.getElementById("chargerCurrent");
 let panelPower = document.getElementById("panelPower");
+let chargerPerformance = document.getElementById("chargerPerformance");
 
 function calc() {
-    let amp = Number(powerConsumption.value) / Number(voltage.value);
+    let v = Number(voltage.value);
+    let amp = Number(powerConsumption.value) / v;
     averageCurrent.innerText = amp.toFixed(2);
     let h = Number(noChargeHours.value);
     let ah = amp * h;
@@ -25,8 +27,8 @@ function calc() {
     let a = ah / charge;
     chargeCurrent.innerText = a.toFixed(2);
     a += amp;
-    panelCurrent.innerText = a.toFixed(2);
-    let p = a * 12;
+    chargerCurrent.innerText = a.toFixed(2);
+    let p = a * v / Number(chargerPerformance.value) * 100;
     panelPower.innerText = p.toFixed(2);
 }
 

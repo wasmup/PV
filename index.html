@@ -42,7 +42,7 @@
             <td><label for="noChargeHours">Number of hours without receiving a
                     charge</label></td>
             <td><input type="text" id="noChargeHours" value="48"></td>
-            <td>hours [h]</td>
+            <td>Hours [h]</td>
         </tr>
 
         <tr>
@@ -74,7 +74,7 @@
         </tr>
 
         <tr>
-            <td><label for="solarPerformance"> Solar performance</label></td>
+            <td><label for="solarPerformance">Average solar performance</label></td>
             <td><input type="text" id="solarPerformance" value="50">%</td>
             <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
         </tr>
@@ -93,12 +93,20 @@
             <td>Amperes [A]</td>
         </tr>
         <tr>
-            <td><label for="panelCurrent">Panel current output</label></td>
+            <td><label for="chargerCurrent">Average power supply current output </label></td>
             <td>
-                <div id="panelCurrent"></div>
+                <div id="chargerCurrent"></div>
             </td>
             <td>Amperes [A]</td>
         </tr>
+
+        <tr>
+            <td><label for="chargerPerformance"> Switch mode power supply performance (charger)</label></td>
+            <td><input type="text" id="chargerPerformance" value="80">%</td>
+            <td></td>
+        </tr>
+
+
         <tr>
             <td><label for="panelPower">Panel power output</label></td>
             <td>
