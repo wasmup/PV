@@ -20,7 +20,7 @@
 
         <tr>
             <td><label for="powerConsumption">Average power consumption</label></td>
-            <td><input type="number" id="powerConsumption" value="25" min="0"></td>
+            <td><input type="number" id="powerConsumption" value="25" min="0" class="dg"></td>
             <td>Watts [W]</td>
         </tr>
 
@@ -119,7 +119,7 @@
         <tr>
             <td><label for="panelPower">PV Panel's output power</label></td>
             <td>
-                <div id="panelPower"></div>
+                <div id="panelPower" class="dg"></div>
             </td>
             <td>Watts [W]</td>
             <td><input type="button" value="Calculate" id="calculate"> </td>
@@ -135,7 +135,7 @@
         5</b>. <br>
     Battery capacity will decrease with time. So it’s better to go below the ideal battery charger size rather
     than overshoot it.
-    <a href="http://www.upsbatterycenter.com/blog/choose-correct-charger-size/">ref</a>
+    <a target="_blank" href="http://www.upsbatterycenter.com/blog/choose-correct-charger-size/">ref</a>
     <hr>
     Most battery manufacturers specify battery capacity assuming a discharge time of 20 hours. <br>
     A 100 Ah battery, for
@@ -149,7 +149,7 @@
     <hr>
     3-STAGE CHARGER (for a 12 V battery): Starts charging at a constant current until the 14.4V is reached. Then, the
     current is reduced until it drops to one quarter of its maximum. Then changes to 13.8 V.
-    <a href="http://www.operatingtech.com/lib/pdf/A%20Guide%20to%20battery%20Charging.pdf">ref</a>
+    <a target="_blank" href="http://www.operatingtech.com/lib/pdf/A%20Guide%20to%20battery%20Charging.pdf">ref</a>
     <hr>
 
     <script src="index.js"></script>

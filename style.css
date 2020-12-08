@@ -21,5 +21,10 @@
     color: red;
   }
   .db{
+    font-weight: bold;
     color: darkblue;
+  }
+  .dg{
+    font-weight: bold;
+    color: darkgreen;
   }
