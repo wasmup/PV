@@ -79,7 +79,7 @@
             <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
         </tr>
         <tr>
-            <td><label for="chargeTime"><b>Charge time</b> (Hours of usable sun per day * Solar performance)</label>
+            <td><label for="chargeTime"><b>Charging time</b> (Hours of usable sun per day * Solar performance)</label>
             </td>
             <td>
                 <div id="chargeTime"></div>
@@ -87,7 +87,7 @@
             <td>Hours [h]</td>
         </tr>
         <tr>
-            <td><label for="chargeCurrent"><b>Charge current</b></label></td>
+            <td><label for="chargeCurrent"><b>Charging current</b></label></td>
             <td>
                 <div id="chargeCurrent" class="red-bold"></div>
             </td>
@@ -102,7 +102,7 @@
         </tr>
 
         <tr>
-            <td><label for="chargerPerformance"> Switch mode power supply performance (charger)</label></td>
+            <td><label for="chargerPerformance">Switch mode power supply performance (charger)</label></td>
             <td><input type="number" id="chargerPerformance" value="85" min="0" max="100">%</td>
             <td></td>
         </tr>
@@ -117,11 +117,15 @@
         </tr>
     </table>
     <hr>
-
     For solar performance: Select your
     location and click the
     "Visualize results"
     <a target="_blank" href="https://re.jrc.ec.europa.eu/pvg_tools/en/tools.html">here</a>
+    <hr>
+    Ideally, you should have a charger that has a rate of <b>battery capacity / 5</b>.
+    Battery capacity will decrease with time. So it’s better to go below the ideal battery charger size rather
+    than overshoot it.
+    <a href="http://www.upsbatterycenter.com/blog/choose-correct-charger-size/">ref</a>
     <hr>
     Most battery manufacturers specify battery capacity assuming a discharge time of 20 hours. A 100 Ah battery, for
     instance, is supposed to deliver 5 amps per hour for 20 hours, during which time voltage should not drop below 10.5
@@ -136,6 +140,8 @@
     current is reduced until it drops to one quarter of its maximum. Then changes to 13.8 V.
     <hr>
     <a href="http://www.operatingtech.com/lib/pdf/A%20Guide%20to%20battery%20Charging.pdf">ref</a>
+    <hr>
+
     <script src="index.js"></script>
 </body>
 
