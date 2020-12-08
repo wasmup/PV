@@ -16,3 +16,7 @@
     /* color: white; */
     font-size:24px;
   }
+  .red-bold{
+    font-weight: bold;
+    color: red;
+  }
