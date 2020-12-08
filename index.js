@@ -5,6 +5,7 @@ let noChargeHours = document.getElementById("noChargeHours");
 let minimumCapacity = document.getElementById("minimumCapacity");
 let batteryEfficiency = document.getElementById("batteryEfficiency");
 let batteryCapacity = document.getElementById("batteryCapacity");
+let batteryCapacity2 = document.getElementById("batteryCapacity2");
 let activeHours = document.getElementById("activeHours");
 let solarPerformance = document.getElementById("solarPerformance");
 let chargeTime = document.getElementById("chargeTime");
@@ -28,6 +29,7 @@ function calc() {
     chargeCurrent.innerText = a.toFixed(2);
     a += amp;
     chargerCurrent.innerText = a.toFixed(2);
+    batteryCapacity2.innerText = (5 * a).toFixed(2);
     let p = a * v / Number(chargerPerformance.value) * 100;
     panelPower.innerText = p.toFixed(2);
 }
@@ -43,6 +45,8 @@ noChargeHours.addEventListener("change", calc);
 batteryEfficiency.addEventListener("change", calc);
 
 activeHours.addEventListener("change", calc);
+
+batteryCapacity2.addEventListener("change", calc);
 
 solarPerformance.addEventListener("change", calc);
 
