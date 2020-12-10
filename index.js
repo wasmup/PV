@@ -18,21 +18,26 @@ function calc() {
     let v = Number(voltage.value);
     let amp = Number(powerConsumption.value) / v;
     averageCurrent.innerText = amp.toFixed(2);
+
     let h = Number(noChargeHours.value);
     let ah = amp * h;
     minimumCapacity.innerText = ah.toFixed(2);
+
     ah *= Number(batteryEfficiency.value);
     batteryCapacity.innerText = ah.toFixed(2);
-    let charge = Number(activeHours.value) * Number(solarPerformance.value) / 100;
-    chargeTime.innerText = charge.toFixed(2);
-    let a = ah / charge;
-    chargeCurrent.innerText = a.toFixed(2);
-    a += amp;
-    chargerCurrent.innerText = a.toFixed(2);
-    let chargerCurrentX5 = 5 * a;
-    let a2averageCurrentX20 = 20 * amp;
-    batteryCapacity2.innerText = Math.max(chargerCurrentX5, a2averageCurrentX20).toFixed(2);
-    let p = a * v / Number(chargerPerformance.value) * 100;
+
+    let chargingHours = Number(activeHours.value) * Number(solarPerformance.value) / 100;
+    chargeTime.innerText = chargingHours.toFixed(2);
+
+    let chargingCurrent = ah / chargingHours;
+    chargeCurrent.innerText = chargingCurrent.toFixed(2);
+
+    let powerSuppluOutputCurrent = chargingCurrent + amp;
+    chargerCurrent.innerText = powerSuppluOutputCurrent.toFixed(2);
+
+    batteryCapacity2.innerText = Math.max(5 * chargingCurrent, 20 * amp, ah).toFixed(2);
+
+    let p = powerSuppluOutputCurrent * v / Number(chargerPerformance.value) * 100;
     panelPower.innerText = p.toFixed(2);
 }
 
