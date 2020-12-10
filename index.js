@@ -29,7 +29,9 @@ function calc() {
     chargeCurrent.innerText = a.toFixed(2);
     a += amp;
     chargerCurrent.innerText = a.toFixed(2);
-    batteryCapacity2.innerText = (5 * a).toFixed(2);
+    let chargerCurrentX5 = 5 * a;
+    let a2averageCurrentX20 = 20 * amp;
+    batteryCapacity2.innerText = Math.max(chargerCurrentX5, a2averageCurrentX20).toFixed(2);
     let p = a * v / Number(chargerPerformance.value) * 100;
     panelPower.innerText = p.toFixed(2);
 }

@@ -94,7 +94,8 @@
             <td>Amperes [A]</td>
         </tr>
         <tr>
-            <td><label for="batteryCapacity2">Minimum battery Capacity (5*Charging current)</label></td>
+            <td><label for="batteryCapacity2">Minimum battery Capacity = max(5*Charging current, 20*Average
+                    Current)</label></td>
             <td>
                 <div id="batteryCapacity2" class="db"> </div>
             </td>
@@ -105,7 +106,7 @@
             <td><label for="chargerCurrent">Power Supply's output current (Charging current + Average current)</label>
             </td>
             <td>
-                <div id="chargerCurrent"></div>
+                <div id="chargerCurrent" class="red-bold"></div>
             </td>
             <td>Amperes [A]</td>
         </tr>
