@@ -40,9 +40,11 @@
 
         <tr>
             <td><label for="noChargeHours">Number of hours <b>without receiving a
-                        charge</b> (min)</label></td>
+                        charge</b> </label></td>
             <td><input type="number" id="noChargeHours" value="24" min="0"></td>
             <td>Hours [h]</td>
+            <td><input type="button" value="1 year" id="oneYear"> </td>
+
         </tr>
 
         <tr>
@@ -68,21 +70,21 @@
         </tr>
 
         <tr>
-            <td><label for="activeHours">Hours of usable sun per day (min)</label></td>
-            <td><input type="number" id="activeHours" value="8" min="0" max="24"></td>
+            <td><label for="activeHours">Hours of usable sun</label></td>
+            <td><input type="number" id="activeHours" value="8" min="0"></td>
             <td>Hours [h]</td>
         </tr>
 
         <tr>
-            <td><label for="solarPerformance">Solar performance (min)</label></td>
+            <td><label for="solarPerformance">Solar performance </label></td>
             <td><input type="number" id="solarPerformance" value="50" min="0">%</td>
             <td>for rain:0%, thin clouds: 50%, sun: 100% </td>
         </tr>
         <tr>
-            <td><label for="chargeTime"><b>Charging time</b> (Hours of usable sun per day * Solar performance)</label>
+            <td><label for="chargeTime"><b>Charging time</b> (Hours of usable sun * Solar performance)</label>
             </td>
             <td>
-                <div id="chargeTime"></div>
+                <div id="chargeTime" class="dg"></div>
             </td>
             <td>Hours [h]</td>
         </tr>
@@ -125,6 +127,20 @@
             <td>Watts [W]</td>
             <td><input type="button" value="Calculate" id="calculate"> </td>
         </tr>
+        <tr>
+            <td><label for="pvPerformance">PV Performance per square meter</label></td>
+            <td><input type="number" id="pvPerformance" value="20" min="0" max="100">%</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td> PV Area </td>
+            <td>
+                <div id="pvArea" class="dg"></div>
+            </td>
+            <td> square meter [m<sup>2</sup>]</td>
+            <td></td>
+        </tr>
     </table>
     <hr>
     For solar performance: Select your
@@ -152,6 +168,9 @@
     current is reduced until it drops to one quarter of its maximum. Then changes to 13.8 V.
     <a target="_blank" href="http://www.operatingtech.com/lib/pdf/A%20Guide%20to%20battery%20Charging.pdf">ref</a>
     <hr>
+    The standard solar panel has an input rate of around 1000 Watts per square meter, and the majority of solar panels
+    available have around 15-20%. Therefore, if your solar panel was 1 square meter in size, then it would likely only
+    produce around 150-200W in good sunlight.
 
     <script src="index.js"></script>
 </body>

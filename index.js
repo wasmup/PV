@@ -13,6 +13,9 @@ let chargeCurrent = document.getElementById("chargeCurrent");
 let chargerCurrent = document.getElementById("chargerCurrent");
 let panelPower = document.getElementById("panelPower");
 let chargerPerformance = document.getElementById("chargerPerformance");
+let pvPerformance = document.getElementById("pvPerformance");
+let pvArea = document.getElementById("pvArea");
+let oneYear = document.getElementById("oneYear");
 
 function calc() {
     let v = Number(voltage.value);
@@ -39,24 +42,27 @@ function calc() {
 
     let p = powerSuppluOutputCurrent * v / Number(chargerPerformance.value) * 100;
     panelPower.innerText = p.toFixed(2);
+    let area = p / (1000 * Number(pvPerformance.value) / 100);
+    pvArea.innerText = area.toFixed(2)
 }
 
 document.getElementById("calculate").addEventListener("click", calc);
-
 powerConsumption.addEventListener("change", calc);
-
 voltage.addEventListener("change", calc);
-
 noChargeHours.addEventListener("change", calc);
-
 batteryEfficiency.addEventListener("change", calc);
-
 activeHours.addEventListener("change", calc);
-
 batteryCapacity2.addEventListener("change", calc);
-
 solarPerformance.addEventListener("change", calc);
-
 chargerPerformance.addEventListener("change", calc);
+pvPerformance.addEventListener("change", calc);
+
+oneYear.addEventListener("click", () => {
+    noChargeHours.value = 365 * 24;
+    activeHours.value = 365;
+    solarPerformance.value = 100;
+
+    calc()
+});
 
 calc();
